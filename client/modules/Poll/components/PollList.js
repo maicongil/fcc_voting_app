@@ -1,21 +1,17 @@
 import React from 'react';
 import PollListItem from './PollListItem/PollListItem'
 
-
-function renderPollListItem(polls){
-    return polls.map( poll => {
-        return  <PollListItem />;
-    })
-}
-
-
 function PollList(props){
 
     return (
-        <div>
-            Poll List
-            { renderPollListItem(props.polls) }
-        </div>
+          <div className="listView">
+            <p>Poll List</p>
+            {
+                props.polls.map(poll => (
+                <PollListItem title={poll.title}/>
+                ))
+            }
+           </div>
     );
 }
 

@@ -10,7 +10,7 @@ export function getPolls(req, res){
             if(error){
                 res.json({ error: err });   
             }else{
-                res.json(polls);   
+                res.json({polls});   
             }
         })
     }

@@ -29,6 +29,7 @@ export default (
     <IndexRoute
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
+          
           cb(null, require('./modules/Post/pages/PostListPage/PostListPage').default);
         });
       }}
@@ -47,7 +48,7 @@ export default (
       path="/polls"
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
-          cb(null, require('./modules/Poll/pages/PollListPage/PollListPage').default)
+          cb(null, require('./modules/Poll/pages/PollListPage/PollListPage').default);
         });
       }}
     />
