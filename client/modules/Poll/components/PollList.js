@@ -4,13 +4,14 @@ import PollListItem from './PollListItem/PollListItem'
 function PollList(props){
 
     return (
-          <div className="listView">
-            <p>Poll List</p>
+          <div>
+            <ul>
             {
                 props.polls.map(poll => (
-                <PollListItem title={poll.title}/>
+                    <PollListItem poll={poll} key={poll._id} />
                 ))
             }
+            </ul>
            </div>
     );
 }
