@@ -12,13 +12,11 @@ class PollListPage extends Component{
     render(){
         return (
             <div>
-                Poll List Page
                 <PollList polls={ this.props.polls } />
             </div>
             );
     };
 }
-
 
 PollListPage.need = [() => { return fetchPolls(); }];
 
