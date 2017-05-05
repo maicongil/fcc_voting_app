@@ -18,7 +18,6 @@ if (process.env.NODE_ENV !== 'production') {
   // Require async routes only in development for react-hot-reloader to work.
   require('./modules/Post/pages/PostListPage/PostListPage');
   require('./modules/Post/pages/PostDetailPage/PostDetailPage');
-  require('./modules/Poll/pages/PollDetailPage/PollDetailPage');
   require('./modules/Poll/pages/PollListPage/PollListPage');
 }
 
@@ -53,17 +52,6 @@ export default (
         });
       }}
     />
-
-
-    <Route 
-      path="/polls/:id"
-      getComponent={(nextState, cb) =>{
-        require.ensure([], require => {
-          cb(null, require('./modules/Poll/pages/PollDetailPage/PollDetailPage').default);
-        });
-      }}
-    />
-
   </Route>
 
 );

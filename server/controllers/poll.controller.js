@@ -32,6 +32,7 @@ export function getPoll(req, res){
 
 //Create a new poll
 export function createPoll(req, res){
+    console.log('Server data');
     var poll = new Poll({
         title : req.body.title,
         options : req.body.options
@@ -39,8 +40,10 @@ export function createPoll(req, res){
 
     poll.save(function (err, createdPoll) {
         if (err) {
+            console.log(err);
             res.json({ error: err });   
         } else {
+            console.log(createPoll);
             res.json(createdPoll);
         }
     });

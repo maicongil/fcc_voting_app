@@ -20,7 +20,7 @@ const pollSchema = new Schema({
         type: Date,
         default: Date.now 
     },
-    cuid: { type: 'String', required: true },
+    
     options : {type : [option], required : [true, 'At least one option is required']}
 });
 

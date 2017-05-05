@@ -5,7 +5,6 @@ import { List } from 'semantic-ui-react';
 function PollList(props){
 
     return (
-          <div>
             <List divided verticalAlign='middle'>
             {
                 props.polls.map(poll => (
@@ -13,7 +12,6 @@ function PollList(props){
                 ))
             }
             </List>
-           </div>
     );
 }
 

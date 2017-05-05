@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Form, Radio, Label, Button, Header, Image, Modal, Divider } from 'semantic-ui-react';
+import {Grid, Form, Radio, Label, Button, Header, Image, Modal, Divider, Card } from 'semantic-ui-react';
 import { Pie } from 'react-chartjs';
 
 const PollModal = (props) => (
@@ -15,6 +15,13 @@ const PollModal = (props) => (
                   <Radio label={option.title} name="pollAnswer" value={option._id} />
                 </Form.Field>
               ))}
+
+              <Card.Group>
+                <Card fluid color='red' header='Option 1' />
+                <Card fluid color='orange' header='Option 2' />
+                <Card fluid color='yellow' header='Option 3' />
+            </Card.Group>
+
             <Divider/>
             <Button color="blue">Submit</Button>
             <Button color="blue">Add new option</Button>
